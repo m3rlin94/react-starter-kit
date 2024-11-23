@@ -1,0 +1,12 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+pnpm lint-staged && pnpm type-check
+
+# Re-stage changes made by lint-staged
+git add .
+
+# Ensure the working directory is clean before committing
+if ! git diff-index --quiet HEAD --; then
+  echo "Some changes were made by the pre-commit hook. All changes are staged for this commit."
+fi
