@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ... */
+
+@layer base {
+  :root {
+    --background: 0 0% 100%; /* White */
+    --foreground: 206 10% 13%; /* #1e2225 */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 206 10% 13%; /* #1e2225 */
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 206 10% 13%; /* #1e2225 */
+
+    --primary: 359 100% 34%; /* Brand Red (#ad0002) */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    --secondary: 0 0% 94%; /* Light Gray */
+    --secondary-foreground: 206 10% 13%; /* #1e2225 */
+
+    --muted: 0 0% 94%; /* Light Gray */
+    --muted-foreground: 210 5% 35%; /* Medium Gray */
+
+    --accent: 359 100% 34%; /* Brand Red */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    --destructive: 359 100% 55%; /* Bright Red */
+    --destructive-foreground: 0 0% 100%; /* White */
+
+    --border: 0 0% 86%; /* Light Gray */
+    --input: 0 0% 86%; /* Light Gray */
+
+    --ring: 206 10% 13%; /* #1e2225 */
+
+    --chart-1: 0 84% 45%; /* Dark Red */
+    --chart-2: 150 45% 45%; /* Teal */
+    --chart-3: 200 50% 40%; /* Blue */
+    --chart-4: 40 80% 60%; /* Yellow-Orange */
+    --chart-5: 25 85% 65%; /* Light Orange */
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%; /* White */
+    --sidebar-foreground: 240 5.3% 26.1%; /* #1e2225 */
+    --sidebar-primary: 240 5.9% 10%; /* #ad0002 */
+    --sidebar-primary-foreground: 0 0% 98%; /* White */
+    --sidebar-accent: 240 4.8% 95.9%; /* #ad0002 */
+    --sidebar-accent-foreground: 240 5.9% 10%; /* White */
+    --sidebar-border: 220 13% 91%; /* Light Gray */
+    --sidebar-ring: 217.2 91.2% 59.8%; /* Bright Red */
+  }
+
+  .dark {
+    --background: 206 10% 13%; /* #1e2225 */
+    --foreground: 0 0% 95%; /* White */
+
+    --card: 206 10% 13%; /* #1e2225 */
+    --card-foreground: 0 0% 95%; /* White */
+
+    --popover: 206 10% 13%; /* #1e2225 */
+    --popover-foreground: 0 0% 95%; /* White */
+
+    --primary: 359 100% 34%; /* Brand Red (#ad0002) */
+    --primary-foreground: 0 0% 95%; /* White */
+
+    --secondary: 0 0% 18%; /* Medium Dark Gray */
+    --secondary-foreground: 0 0% 95%; /* White */
+
+    --muted: 0 0% 18%; /* Medium Dark Gray */
+    --muted-foreground: 0 0% 70%; /* Light Gray */
+
+    --accent: 359 100% 34%; /* Brand Red */
+    --accent-foreground: 0 0% 95%; /* White */
+
+    --destructive: 359 100% 55%; /* Bright Red */
+    --destructive-foreground: 0 0% 95%; /* White */
+
+    --border: 0 0% 18%; /* Medium Dark Gray */
+    --input: 0 0% 18%; /* Medium Dark Gray */
+
+    --ring: 0 0% 70%; /* Light Gray */
+
+    --chart-1: 0 84% 45%; /* Dark Red */
+    --chart-2: 150 45% 45%; /* Teal */
+    --chart-3: 200 50% 40%; /* Blue */
+    --chart-4: 40 80% 60%; /* Yellow-Orange */
+    --chart-5: 25 85% 65%; /* Light Orange */
+
+    --sidebar-background: 240 5.9% 10%; /* #1e2225 */
+    --sidebar-foreground: 240 4.8% 95.9%; /* White */
+    --sidebar-primary: 224.3 76.3% 48%; /* #ad0002 */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 240 3.7% 15.9%; /* #ad0002 */
+    --sidebar-accent-foreground: 240 4.8% 95.9%; /* White */
+    --sidebar-border: 240 3.7% 15.9%; /* Medium Dark Gray */
+    --sidebar-ring: 217.2 91.2% 59.8%; /* Bright Red */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+}
