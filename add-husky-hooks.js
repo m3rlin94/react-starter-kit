@@ -14,10 +14,7 @@ if (!existsSync(huskyDir)) {
 
 // Create the pre-commit hook file
 const preCommitHookPath = join(huskyDir, "pre-commit");
-const hookContent = `#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
-
-pnpm lint-staged && pnpm type-check
+const hookContent = `pnpm lint-staged && pnpm type-check
 
 # Re-stage changes made by lint-staged
 git add .
