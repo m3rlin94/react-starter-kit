@@ -18,7 +18,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <SidebarProvider defaultOpen={true}>
       <AppSidebar />
-      <SidebarInset>
+      <SidebarInset className="max-h-screen">
         <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
           <div className="flex items-center gap-2 px-4">
             <SidebarTrigger className="-ml-1" />
@@ -38,7 +38,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </Breadcrumb>
           </div>
         </header>
-        <div className="flex flex-col gro h-full p-4">{children}</div>
+        <div
+          className="flex flex-col gro p-4 overflow-y-scroll"
+          style={{ height: "calc(100% - 4rem)" }}
+        >
+          {children}
+        </div>
       </SidebarInset>
     </SidebarProvider>
   );
